@@ -1,0 +1,56 @@
+* {
+	font-family: helvetica;
+	box-sizing: border-box;
+}
+/* SideMenu component styles */
+.SideMenu {
+  background-color: #f7f7f7;
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  padding: 20px;
+}
+
+.SideMenu a {
+  display: block;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.SideMenu a:hover {
+  background-color: #ddd;
+}
+
+.SideMenu a[disabled] {
+  background-color: #aaa;
+}
+
+/* Main content styles */
+.App {
+  margin-left: 250px;
+  padding: 20px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  /* Make the side menu responsive */
+  .SideMenu {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 10px;
+  }
+
+  .App {
+    margin-left: 0;
+  }
+}
+
