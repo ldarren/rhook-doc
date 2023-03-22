@@ -34,6 +34,8 @@
 
 /* Main content styles */
 .App {
+  display: flex;
+  justify-content: space-between;
   margin-left: 250px;
   padding: 20px;
   font-size: 18px;
@@ -54,3 +56,23 @@
   }
 }
 
+.panel {
+  width: 48%;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.left-panel {
+  margin-right: 4%;
+}
+
+.right-panel {
+  margin-left: 4%;
+}
+textarea
+{
+  border:1px solid #999999;
+  width:100%;
+  margin:5px 0;
+  padding:3px;
+}

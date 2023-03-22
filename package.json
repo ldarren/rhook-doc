@@ -1,16 +1,20 @@
 {
-  "name": "hooks",
-  "version": "0.1.0",
+  "name": "rhooks-doc",
+  "version": "0.2.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-  	"start": "parcel index.html --open",
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Darren Liew",
   "license": "ISC",
   "dependencies": {
+    "@babel/standalone": "^7.21.3",
+    "acorn": "^8.8.2",
+    "escodegen": "^2.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
