@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useRef, useEffect, startTransition} from 'react'
 import { createEditor } from '../editor'
 
 // default code 
@@ -13,42 +13,35 @@ function Greet() {
 <Greet />
 `
 
+const DocEffect = () => {
+	const [script, setScript] = useState(code)
+	const previewEl = useRef()
+	const [editor, setEditor] = useState(null)
 
-class DocEffect extends React.Component {
-  state = {
-    code
-  }
+	useEffect(() => {
+		setEditor(createEditor(previewEl.current))
+	}, [])
 
-  editor = null
 
-  el = null
+	useEffect(() => {
+		if (!editor) return
+		startTransition(() => {
+			editor.run(script)
+		})
+	}, [editor, script])
 
-  componentDidMount() {
-    this.editor = createEditor(this.el)
-    this.editor.run(code)
-  }
+	const onCodeChange = ({target: {value}}) => {
+		setScript(value)
+	}
 
-  onCodeChange = ({ target: { value } }) => {
-    this.setState({ code: value })
-    this.rundebounce()
-  }
-
-  rundebounce = () => {
-    const { code } = this.state
-    this.editor.run(code)
-  }//, 500)
-
-  render() {
-    const { code } = this.state
-    return (
-      <div className="App">
-	  <div className="panel panel-left code-editor">
-		<textarea cols="2" rows="80" value={code} onChange={this.onCodeChange} />
-	  </div>
-	  <div className="panel panel-right preview" ref={el => (this.el = el)} />
-      </div>
-    )
-  }
+	return (
+		<div className="App">
+			<div className="panel panel-left code-editor">
+				<textarea cols="2" rows="80" value={script} onChange={onCodeChange} />
+			</div>
+			<div className="panel panel-right preview" ref={previewEl} />
+		</div>
+	)
 }
 
 export default DocEffect
