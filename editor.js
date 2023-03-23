@@ -97,6 +97,13 @@ export function createEditor(el, moduleResolver) {
         // just compiles and returns the stringified wrapper function
         toString(code) {
             return compile(code).toString()
-        }
+        },
+
+		unmount() {
+			// prevent: Attempted to synchronously unmount a root while React was already rendering.
+			requestAnimationFrame(() => {
+				root.unmount()
+			})
+		}
     }
 }

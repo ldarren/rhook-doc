@@ -8,7 +8,6 @@ import './App.css'
 
 function App() {
   const { page } = useContext(RoutingContext)
-
   return (
     <>
       {(routes.home === page) && <Home />}

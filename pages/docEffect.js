@@ -19,7 +19,12 @@ const DocEffect = () => {
 	const [editor, setEditor] = useState(null)
 
 	useEffect(() => {
-		setEditor(createEditor(previewEl.current))
+		const ed = createEditor(previewEl.current, {identifierPrefix: Date.now().toString(36)})
+		setEditor(ed)
+		return () => {
+			if (!ed) return
+			ed.unmount()
+		}
 	}, [])
 
 
@@ -44,4 +49,4 @@ const DocEffect = () => {
 	)
 }
 
-export default DocEffect
+export default React.memo(DocEffect)
