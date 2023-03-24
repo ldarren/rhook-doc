@@ -2,7 +2,7 @@ import React, {useState, useRef, useEffect, startTransition} from 'react'
 import { createEditor } from '../editor'
 
 // default code 
-const code = `import React from 'react'
+const codeOld = `import React from 'react'
 
 // edit this example
 
@@ -12,8 +12,29 @@ function Greet() {
 
 <Greet />
 `
+const code = `import React, {useRef, useState} from 'react'
 
-const DocEffect = () => {
+const Test = () => {
+	const [count, setCount] = useState(0);
+	const countRef = useRef(0);
+
+	function handleClick() {
+		setCount(count + 1);
+		countRef.current += 1;
+		console.log(\`Count: \${count}, Count ref: \${countRef.current}\`);
+	}
+
+	return (
+		<div className="App">
+			<p>Ref: {count}</p>
+			<button onClick={handleClick}>Increment count</button>
+		</div>
+	);
+}
+<Test/>
+`
+
+const DocRef= () => {
 	const [script, setScript] = useState(code)
 	const previewEl = useRef()
 	const [editor, setEditor] = useState(null)
@@ -49,4 +70,5 @@ const DocEffect = () => {
 	)
 }
 
-export default React.memo(DocEffect)
+export default React.memo(DocRef)
+
