@@ -7,9 +7,21 @@ import SideMenu from './SideMenu'
  */
 export const routes = {
 	home: 'home',
-	docEffect: 'doceffect',
-	docRef: 'docref',
-	docState: 'docstate'
+	useCallback: 'usecallback',
+	useDeferredValue: 'usedeferredvalue',
+	useMemo: 'usememo',
+	useTransition: 'usetransition',
+	useState: 'usestate',
+	useReducer: 'usereducer',
+	useEffect: 'useeffect',
+	useLayoutEffect: 'uselayouteffect',
+	useInsertionEffect: 'useinsertioneffect',
+	useContext: 'usecontext',
+	useSyncExternalStore: 'usesyncexternalstore',
+	useRef: 'useref',
+	useImperativeHandle: 'useimperativehandle',
+	useDebugValue: 'usedebugvalue',
+	useId: 'useid',
 }
 
 export const RoutingContext = createContext({ page: routes.home })
