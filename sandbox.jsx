@@ -53,7 +53,7 @@ function compile(code, render) {
 	}
 }
 
-export function createEditor(el, moduleResolver) {
+export function create(el, moduleResolver) {
 	const root = ReactDOM.createRoot(el)
 	window.onerror = (evt, source, lineno, colno, err) => {
 		render(<><h3>Runtime Error</h3><pre style={{ color: 'red' }}>{`${evt}\n${err.message} [${lineno}:${colno}]\n${err.stack}`}</pre></>)
