@@ -16,6 +16,7 @@
     "acorn": "^8.8.2",
     "escodegen": "^2.0.0",
     "prismjs": "^1.29.0",
+    "purecss": "^3.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-simple-code-editor": "^0.13.1"

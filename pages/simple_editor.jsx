@@ -12,10 +12,6 @@ export default function SimpleEditor({code, onChange}) {
       onValueChange={onChange}
       highlight={code => highlight(code, languages.js)}
       padding={10}
-      style={{
-        fontFamily: '"Fira code", "Fira Mono", monospace',
-        fontSize: 12,
-      }}
     />
   )
 }

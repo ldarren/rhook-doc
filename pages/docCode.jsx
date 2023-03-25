@@ -1,6 +1,6 @@
 import React, {useState, useRef, useEffect, startTransition} from 'react'
-import { create } from '../sandbox'
-import SimpleEditor from '../simple_editor'
+import { create } from './sandbox'
+import SimpleEditor from './simple_editor'
 
 const DocCode = ({src}) => {
 	const [script, setScript] = useState('')
