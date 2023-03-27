@@ -2,7 +2,6 @@ import React, * as hooks from 'react'
 import ReactDOM from 'react-dom/client'
 import * as Acorn from 'acorn'
 import { generate } from 'escodegen'
-import { transform } from '@babel/standalone'
 
 const acornOptions = {
 	ecmaVersion: 'latest',
@@ -21,7 +20,7 @@ export function findReactNode(ast) {
 }
 
 function parse(code) {
-	const tcode = transform(code, { presets: ['es2015', 'react'] }).code
+	const tcode = Babel.transform(code, { presets: ['es2015', 'react'] }).code
 	return Acorn.parse(tcode, acornOptions)
 }
 

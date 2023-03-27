@@ -1,18 +1,18 @@
 {
   "name": "rhooks-doc",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "vite",
     "build": "vite build",
+    "preview": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Darren Liew",
   "license": "ISC",
   "dependencies": {
-    "@babel/standalone": "^7.21.3",
     "acorn": "^8.8.2",
     "escodegen": "^2.0.0",
     "prismjs": "^1.29.0",
