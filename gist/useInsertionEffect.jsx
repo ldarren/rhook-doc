@@ -1,3 +1,6 @@
+/**
+ * Open browser console to see the order of side effects get triggered
+ */
 import React, { useEffect, useInsertionEffect, useLayoutEffect } from 'react'
 
 const Child = () => {
@@ -25,7 +28,7 @@ function App() {
   return (
     <div className="App">
       <Child />
-      <p>Random Text</p>
+      <p>Open Browser Console</p>
     </div>
   )
 }

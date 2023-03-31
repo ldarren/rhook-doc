@@ -1,4 +1,7 @@
-// Source: <https://github.com/reactwg/react-18/discussions/111>
+/**
+ * Open browser console, elements tab to see the generated id
+ * Source: <https://github.com/reactwg/react-18/discussions/111>
+ */
 import React, {useId} from 'react'
 
 function NameFields() {

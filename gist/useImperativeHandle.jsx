@@ -40,6 +40,8 @@ function App() {
     <button onClick={() => modalRef.current.confirmBtn.focus()}>Focus input2</button>
     <button onClick={() => modalRef.current.denyBtn.focus()}>Focus input3</button>
       <CustomModal
+	  	// ** parent can only pass one ref to child,
+		// ** useImperativeHandle is useful when multiple ref from child is desired
         ref={modalRef}
         open={open}
         onClose={() => setOpen(false)}

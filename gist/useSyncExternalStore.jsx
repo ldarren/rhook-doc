@@ -10,8 +10,11 @@ function subscribe(callback) {
 
 function useScrollY(selector = (id) => id) {
   return useSyncExternalStore(
+  	// ** subscribe to external event
     subscribe,
+	// ** client side snapshot
     () => selector(window.scrollY),
+	// ** server side snapshot
     () => true
   );
 }

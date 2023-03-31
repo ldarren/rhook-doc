@@ -7,6 +7,7 @@ import React, {
 const BlinkyRender = () => {
   const [value, setValue] = useState(0)
 
+  /** change this to useEffect and try again **/
   useLayoutEffect(() => {
     if (value !== 0) {
       setValue(0)

@@ -1,4 +1,8 @@
-// https://thisweekinreact.com/articles/useSyncExternalStore-the-underrated-react-api#usesyncexternalstore-to-the-rescue
+/**
+ * React developer tools is required to see the debug value
+ * https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en
+ * Ref: https://thisweekinreact.com/articles/useSyncExternalStore-the-underrated-react-api#usesyncexternalstore-to-the-rescue
+ */
 import React, {useSyncExternalStore, useDebugValue} from 'react'
 
 function subscribe(callback) {

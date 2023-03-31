@@ -15,7 +15,7 @@ function App() {
   }
 
   return <>
-    <input type="text" value={name} onChange={handleChange} />
+    <input type="text" value={name} onChange={handleChange} placeholder="press l"/>
     {isPending ? ( <div>Loading...</div>) : (
 	list.length ? <ul> {list.map(item => <li>{item}</li>)} </ul> : <div>Not found: {name}</div>
     )}

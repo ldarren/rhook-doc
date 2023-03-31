@@ -4,6 +4,7 @@ function Example() {
   const [count, setCount] = useState(0)
 
   function handleIncrement() {
+  	// ** this is similar to setCount(count + 1)
     setCount(old => old + 1)
   }
 

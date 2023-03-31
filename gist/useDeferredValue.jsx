@@ -12,7 +12,7 @@ function App() {
       dataList.push(deferredName)
     }
     return dataList
-  }, [deferredName])
+  }, [deferredName]) // <<<-- change this to name to see the difference
 
   const handleChange = (e) => {
     const { value } = e.target
